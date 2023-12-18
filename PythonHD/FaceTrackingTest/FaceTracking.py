@@ -4,13 +4,13 @@ import time
 import numpy as np
 
 # Initialize the serial connection to Arduino
-arduino = serial.Serial('COM5', 9600)  # Replace 'COM_PORT' with your Arduino's port
+arduino = serial.Serial('COM5', 9600) 
 time.sleep(2)  # Wait for the connection to establish
 
 # Load the Haar Cascade Classifier for face detection
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-# Initialize the video capture object
+# Initialize the video capture object (the parenthesis indicates the camera device)
 cap = cv2.VideoCapture(0)
 
 # Set the rest position for the servos
